@@ -1,0 +1,224 @@
+body {
+  background: #21424d;
+  line-height: 1.6;
+  font-size: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+* ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+*::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  text-align: center;
+  background: #053244;
+  color: #a0d476;
+  padding: 1em;
+}
+
+.header h1 {
+  margin-bottom: -0.2em;
+}
+
+.alert {
+  width: 220px;
+  margin: 0 auto;
+  padding: 0.7em;
+  text-align: center;
+  color: white;
+}
+
+.alert-success {
+  background: green;
+}
+
+.alert-fail {
+  background: #eb3333;
+}
+
+.btn-add-book {
+  background: #143814;
+  color: white;
+  border: 0.01px solid white;
+  padding: 0.7em;
+  border-radius: 3px;
+  margin: 0.8em;
+  width: 11em;
+}
+
+.container {
+  width: 90%;
+  margin: 2em auto;
+}
+
+.container .form-wrap {
+  padding: 2em;
+  border: 1px solid #163046;
+  background: #121d25;
+  color: white;
+  border-radius: 6px;
+  -webkit-box-shadow: -70px 70px 70px rgba(0, 0, 0, 0.6);
+          box-shadow: -70px 70px 70px rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  position: absolute;
+  top: -2000px;
+  z-index: 9;
+}
+
+.container .form-wrap h3 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.container .form-wrap .close-form {
+  padding: 0.7em;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 95%;
+  color: white;
+}
+
+.container .form-wrap form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container .form-wrap form .input-wrap {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.container .form-wrap form .input-wrap .input {
+  padding: 0.5em;
+}
+
+.container .form-wrap .btn-wrap {
+  text-align: center;
+}
+
+.container .form-wrap .btn-wrap .btn {
+  padding: 0.5em;
+  width: 8em;
+  background: #143814;
+  color: white;
+  border: 0.01px solid white;
+  margin: 1em;
+}
+
+.container .book-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container .book-container .book {
+  background: #1f3146;
+  color: #5cf3d2;
+  -webkit-box-shadow: 0 29px 32px -20px rgba(0, 0, 0, 0.5), 0 4px 11px -3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 29px 32px -20px rgba(0, 0, 0, 0.5), 0 4px 11px -3px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 0.8em;
+  margin-bottom: 2em;
+}
+
+.container .book-container .book .title {
+  text-decoration: underline;
+  display: block;
+  text-align: center;
+  margin-bottom: 1.3em;
+  font-weight: 500;
+}
+
+.container .book-container .book .remove {
+  border: 1px solid white;
+  padding: 0.5em;
+  width: 8em;
+  background: #772213;
+}
+
+.container .book-container .book li:last-child {
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.container .book-container .book .status-btn {
+  background: #228496;
+  border: 1px solid #17dfbd;
+}
+
+.container .book-container .book .btn {
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 0.3em;
+}
+
+.container .book-container .book li {
+  margin-bottom: 0.5em;
+}
+
+@media screen and (max-width: 360px) {
+  .form-wrap {
+    width: 280px;
+    left: 5px;
+  }
+  .form-wrap form .input-wrap .input {
+    width: 200px;
+    height: 1.5em;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  .form-wrap {
+    width: 330px;
+    left: 5px;
+  }
+  .form-wrap form .input-wrap .input {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form-wrap {
+    width: 500px;
+    left: 10px;
+  }
+  .form-wrap form .input-wrap .input {
+    width: 400px;
+    height: 2em;
+  }
+  .book-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .book-container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+/*# sourceMappingURL=main.css.map */

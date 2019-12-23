@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>LIbrary Site</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>LIBRARY</h1>
+        <p>This is a simple library site to track your books and there read status </p>
+    </header>
+
+    <div class="js-alert">
+        <!--show alert-->
+    </div>
+
+    <div>
+        <button class="btn-add-book js-btn-add-book">ADD A NEW BOOK</button>
+    </div>
+
+    <main class="container">
+        <div class="form-wrap js-form-wrap ">
+            <button class="close-form js-close-form">
+                &#10005;
+            </button>
+            <h3>Add a new book.</h3>
+            <form action="#!" novalidate>
+                <div class="input-wrap">
+                    <input class="input" type="text" id="js-title" name="book-title" placeholder="Enter the book title." required>
+                </div>
+                <div class="input-wrap">
+                    <input class="input" type="text" id="js-author" name="book-author" placeholder="Enter the book author." required>
+                </div>
+                <div class="input-wrap">
+                    <input class="input" type="text" id="js-pages" name="book-pages" placeholder="Enter the number of pages." required>
+                </div>
+                <div class="input-wrap">
+                    <input class="input" type="text" id="js-read-status" name="book-read-status" placeholder="Enter the book read status." required>
+                </div>
+
+                <div class="btn-wrap">
+                    <button class="btn js-btn" type="submit">
+                        ADD BOOK
+                    </button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="book-container js-book-container">
+
+        </div>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

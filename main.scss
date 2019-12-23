@@ -1,0 +1,236 @@
+// default styles
+body {
+  background: rgb(33, 66, 77);
+  line-height: 1.6;
+  font-size: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+
+  ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+//header container styles
+.header {
+  text-align: center;
+  background: rgb(5, 50, 68);
+  color: rgb(160, 212, 118);
+  padding: 1em;
+
+  h1 {
+    margin-bottom: -0.2em;
+  }
+}
+
+//alert styles
+.alert {
+  width: 220px;
+  margin: 0 auto;
+  padding: 0.7em;
+  text-align: center;
+  color: white;
+
+  &-success {
+    background: green;
+  }
+
+  &-fail {
+    background: rgb(235, 51, 51);
+  }
+}
+
+//open form btn
+.btn-add-book {
+  background: rgb(20, 56, 20);
+  color: white;
+  border: 0.01px solid white;
+  padding: 0.7em;
+  border-radius: 3px;
+  margin: 0.8em;
+  width: 11em;
+}
+
+//the main element container styles
+.container {
+  width: 90%;
+  margin: 2em auto;
+
+  //the form for adding books. styles
+  .form-wrap {
+    padding: 2em;
+    border: 1px solid rgb(22, 48, 70);
+    background: rgb(18, 29, 37);
+    color: white;
+    border-radius: 6px;
+    box-shadow: -70px 70px 70px rgba(0, 0, 0, 0.6);
+    transition: all 500ms;
+
+    position: absolute;
+    top: -2000px;
+    z-index: 9;
+
+    h3 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .close-form {
+      padding: 0.7em;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 20px;
+      margin-left: 95%;
+      color: white;
+    }
+    form {
+      width: 90%;
+      margin: 0 auto;
+
+      .input-wrap {
+        display: block;
+        margin-bottom: 1em;
+
+        .input {
+          padding: 0.5em;
+        }
+      }
+    }
+
+    .btn-wrap {
+      text-align: center;
+
+      .btn {
+        padding: 0.5em;
+        width: 8em;
+        background: rgb(20, 56, 20);
+        color: white;
+        border: 0.01px solid white;
+        margin: 1em;
+      }
+    }
+  }
+
+  .book-container {
+    width: 90%;
+    margin: 0 auto;
+    .book {
+      background: rgb(31, 49, 70);
+      color: rgb(92, 243, 210);
+      box-shadow: 0 29px 32px -20px rgba(0, 0, 0, 0.5),
+        0 4px 11px -3px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      padding: 0.8em;
+      margin-bottom: 2em;
+
+      .title {
+        text-decoration: underline;
+        display: block;
+        text-align: center;
+        margin-bottom: 1.3em;
+        font-weight: 500;
+      }
+
+      .remove {
+        border: 1px solid white;
+        padding: 0.5em;
+        width: 8em;
+        background: rgb(119, 34, 19);
+      }
+      li:last-child {
+        margin-top: 1.5em;
+        text-align: center;
+      }
+
+      .status-btn {
+        background: rgb(34, 132, 150);
+        border: 1px solid rgb(23, 223, 189);
+      }
+      .btn {
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 0.3em;
+      }
+      li {
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .form-wrap {
+    width: 280px;
+    left: 5px;
+
+    form {
+      .input-wrap {
+        .input {
+          width: 200px;
+          height: 1.5em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 414px) {
+  .form-wrap {
+    width: 330px;
+    left: 5px;
+
+    form {
+      .input-wrap {
+        .input {
+          width: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form-wrap {
+    width: 500px;
+    left: 10px;
+
+    form {
+      .input-wrap {
+        .input {
+          width: 400px;
+          height: 2em;
+        }
+      }
+    }
+  }
+
+  .book-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .book-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
